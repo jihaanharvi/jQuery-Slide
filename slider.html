@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Slide</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    .panel-heading {
+      padding: 5px;
+      text-align: center;
+      color: aliceblue;
+      background-color: blue;
+    }
+
+    .panel-body {
+      padding: 10px;
+      display: none;
+      text-align: justify;
+      border: solid 1px blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jumbotron-fluid">
+    <img width="100%"
+      src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/original/info/2021/03/31/a4d9c18d-81ce-4110-8fbb-bf83cfd8c480-1617188002242-6304c66adb3ba9c58e7839074aa13831.png">
+  </div>
+  <br><br>
+  <div class="container text-center justify-content-center">
+    <h2>Fitur Baru untuk Liburan Lebih Tenang!</h2>
+    <br>
+    <h5>Mulai dari tiket hotel sampat pesawat, bisa kamu dapetin dengan mudah</h5>
+    <div class="row mt-5">
+      <div class="col-4">
+        <a href="https://www.tiket.com/info/tiket-flexi">
+          <img
+            src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/original/info/2021/03/31/180053fd-7d42-47ec-805c-081181d5b3f4-1617188017666-1f7e42913db30244be33d53d3ad78ab2.png">
+        </a>
+        <div id="panel1" class="panel panel-primary">
+          <div class="panel-heading" id="heading1">
+            Tiket FLEXI Hotel
+          </div>
+          <div class="panel-body" id="body1">
+            <p><b>Mau nginep di hotel, tapi bingung nentuin tanggal yang pas? </b>Tenang, karena ada tiket FLEXI yang
+              bisa menjadi solusi atas kegalauan kamu.</p>
+            <p>Tiket FLEXI memungkinkan kamu lebih fleksibel dalam menentukan kapan waktu yang tepat untuk nginep di
+              hotel favoritmu tanpa perlu khawatir. Karena, periode penukaran voucher sampai dengan satu tahun dari
+              waktu pemesanan!</p>
+            <p>Untuk bisa menikmati fitur tiket FLEXI, update aplikasi tiket.com versi terbaru di smartphone kamu!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <a href="https://www.tiket.com/info/tiket-flexi-to-do">
+          <img
+            src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/original/info/2021/03/31/4033d94b-0c00-43f0-92ff-a4232dbb7bea-1617188097026-0151118a6e0e4ee5b35e1c9fa2b2d5ae.png">
+        </a>
+        <div id="panel2" class="panel panel-primary">
+          <div class="panel-heading" id="heading2">
+            Tiket FLEXI To-Do
+          </div>
+          <div class="panel-body" id="body2">
+            <p><b>Butuh liburan dan hiburan, tapi bingung nentuin tanggal yang pas biar aman? </b>Dengan tiket FLEXI,
+              beli tiket To Do di tiket.com nggak perlu galau soal tanggal lagi.</p>
+            <p>Tiket FLEXI memungkinkan kamu untuk beli tiket, tanpa harus menentukan tanggal. Kamu bisa lebih fleksibel
+              untuk menentukan kapan waktu yang tepat untuk bisa menikmati aktivitas favorit kamu dengan orang
+              tersayang.</p>
+            <p>Periode penukaran voucher sampai dengan satu tahun dari waktu pemesanan, lho! Update aplikasi tiket.com
+              versi terbaru, untuk bisa menikmati fitur tiket FLEXI.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <a href="https://www.tiket.com/info/tiket-flexi-flight">
+          <img
+            src="https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/original/info/2021/03/31/2a36c863-5192-42b5-8d8a-0a720560ba0e-1617188101743-8551d416dbacbd62d0f25a2993dfc78b.png">
+        </a>
+        <div id="panel3" class="panel panel-primary">
+          <div class="panel-heading" id="heading3">
+            Tiket FLEXI Pesawat
+          </div>
+          <div class="panel-body" id="body3">
+            <p><b>Mau terbang ke destinasi favorit, tapi bingung nentuin tanggal yang pas?</b> Tenang, karena ada tiket
+              FLEXI yang bisa menjadi solusi atas kegalauan kamu.</p>
+            <p>Tiket FLEXI memungkinkan kamu untuk pesan tiket pesawat dengan fleksibilitas lebih dalam menentukan
+              tanggal terbang. Dengan tiket FLEXI, kamu bisa reschedule penerbanganmu dengan mudah tanpa biaya penalty.
+            </p>
+            <p>Untuk bisa menikmati fitur tiket FLEXI, update aplikasi tiket.com versi terbaru di smartphone kamu!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".container").css("margin-bottom", "56px");
+
+      $("#heading1").click(function () {
+        $("#body1").slideDown();
+      });
+
+      $("#heading2").click(function () {
+        $("#body2").slideToggle("fast");
+      });
+
+      $("#heading3").click(function () {
+        $("#body3").slideToggle(1000);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
